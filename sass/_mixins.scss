@@ -1,0 +1,32 @@
+@mixin responsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+    @if $screenWidth == 480px {
+      margin: 0 2.4rem;
+    }
+  }
+}
+
+@mixin style-btn($height, $bg, $colorText) {
+  display: inline-block;
+  height: $height;
+  padding: 0 5rem;
+  line-height: 5.4rem;
+  background-color: $bg;
+  border-radius: 0.6rem;
+  color: $colorText;
+  transition: all 0.3s;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  &:hover {
+    background-color: $purple;
+    color: $yellow;
+  }
+}
+
+@mixin flex-element($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

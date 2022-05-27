@@ -1,0 +1,53 @@
+.bg-purple {
+  width: 100%;
+  height: 57.9rem;
+  background-color: $purple;
+  .s-main {
+    margin-top: 11.8rem;
+    .container {
+      @include flex-element(row, space-between, center);
+      .info-left {
+        width: 100%;
+        max-width: 50rem;
+        .text {
+          h1 {
+            color: $white;
+            font-size: 4.8rem;
+            font-weight: 700;
+            font-family: "PT Sans", sans-serif;
+            margin-bottom: 1.6rem;
+          }
+          p {
+            color: $white;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 27px;
+            margin-bottom: 3.2rem;
+          }
+        }
+        .actions {
+          a {
+            @include style-btn(5.4rem, $yellow, $purple);
+            margin-bottom: 8.4rem;
+          }
+          .btn-down {
+            width: 100%;
+            max-width: 20.5rem;
+            @include flex-element(row, space-between, center);
+            button {
+              width: 4.2rem;
+              height: 4.2rem;
+              background-color: $purple-02;
+              border-radius: 0.4rem;
+              @include flex-element(row, center, center);
+            }
+            span {
+              color: $white;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
