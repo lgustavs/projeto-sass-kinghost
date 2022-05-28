@@ -1,68 +1,112 @@
-.bg-purple {
+.s-main {
   width: 100%;
-  height: 57.9rem;
   background-color: $purple;
+  margin-top: 11.9rem;
+  padding-top: 3.9rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .info-left {
+      width: 100%;
+      max-width: 50rem;
 
-  .s-main {
-    margin-top: 11.8rem;
-
-    .container {
-      @include flex-element(row, space-between, center);
-
-      .info-left {
-        width: 100%;
-        max-width: 50rem;
-
-        .text {
-          h1 {
-            color: $white;
-            font-size: 4.8rem;
-            font-weight: 700;
-            font-family: "PT Sans", sans-serif;
-            margin-bottom: 1.6rem;
-            line-height: 120%;
-          }
-
-          p {
-            color: $white;
-            font-weight: 400;
-            font-size: 1.8rem;
-            line-height: 27px;
-            margin-bottom: 3.2rem;
-            line-height: 150%;
-          }
+      .text {
+        h1 {
+          color: $white;
+          font-size: 4.8rem;
+          font-weight: 700;
+          font-family: "PT Sans", sans-serif;
+          margin-bottom: 1.6rem;
+          line-height: 120%;
         }
 
-        .actions {
-          a {
-            @include style-btn(5.4rem, $yellow, $purple);
-            margin-bottom: 8.4rem;
-          }
-
-          .btn-down {
-            width: 100%;
-            max-width: 20.5rem;
-            @include flex-element(row, space-between, center);
-
-            button {
-              width: 4.2rem;
-              height: 4.2rem;
-              background-color: $purple-02;
-              border-radius: 0.4rem;
-              @include flex-element(row, center, center);
-            }
-
-            span {
-              color: $white;
-              font-weight: 700;
-            }
-          }
+        p {
+          color: $white;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 27px;
+          margin-bottom: 3.2rem;
+          line-height: 150%;
         }
       }
 
+      .actions {
+        .btn-teste {
+          @include style-btn(5.4rem, $yellow, $purple);
+          margin-bottom: 8.4rem;
+        }
+
+        .btn-down {
+          width: 100%;
+          max-width: 20.5rem;
+          @include flex-element(row, space-between, center);
+
+          button {
+            width: 4.2rem;
+            height: 4.2rem;
+            background-color: $purple-02;
+            border-radius: 0.4rem;
+            @include flex-element(row, center, center);
+          }
+
+          span {
+            color: $white;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .image-right {
+      position: relative;
+      top: 3.4rem;
+    }
+  }
+
+  @include responsive(991px) {
+    .container {
+      @include flex-element(column, center, center);
+      .info-left {
+        max-width: 100%;
+        margin-bottom: 3rem;
+        .text {
+          h1 {
+            text-align: center;
+          }
+          p {
+            max-width: 100%;
+            text-align: center;
+          }
+        }
+        .actions {
+          .btn-teste {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+          }
+          .btn-down {
+            max-width: 100%;
+            justify-content: center;
+            gap: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(600px) {
+    padding-top: 2.5rem;
+    margin-top: 8rem;
+    .container {
+      .info-left {
+        .text {
+          h1 {
+            font-size: 4.3rem;
+          }
+        }
+      }
       .image-right {
-        position: relative;
-        top: 8rem;
+        left: -0.9rem;
       }
     }
   }
@@ -80,11 +124,15 @@
       h2 {
         width: 100%;
         max-width: 50.2rem;
-        font-family: 'PT Sans';
+        font-family: "PT Sans";
         font-weight: 700;
         font-size: 3.2rem;
         line-height: 130%;
         color: $gray-01;
+      }
+      p {
+        color: $gray-02;
+        line-height: 150%;
       }
     }
 
@@ -94,7 +142,7 @@
       .list-cards {
         width: 100%;
         max-width: 90.4rem;
-        border-bottom: solid 3px rgba(95, 60, 161, .1);
+        border-bottom: solid 3px rgba(95, 60, 161, 0.1);
         @include flex-element(row, space-between, center);
       }
 
@@ -141,6 +189,94 @@
           font-weight: 400;
           line-height: 165%;
           color: $gray-02;
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      .all-cards {
+        @include flex-element(column, center, center);
+        .list-cards {
+          max-width: 100%;
+          gap: 2.5rem;
+        }
+        .card {
+          max-width: 100%;
+          @include flex-element(column, center, center);
+          padding-top: 0;
+          padding-left: 0;
+          p {
+            max-width: 100%;
+            text-align: center;
+          }
+          &.active {
+            margin-right: 0;
+            p {
+              max-width: 100%;
+            }
+          }
+        }
+        .list-cards {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  @include responsive(600px) {
+    padding-top: 12rem;
+    .container {
+      padding: 0;
+      .text {
+        @include flex-element(column, center, center);
+        margin-bottom: 10rem;
+        h2 {
+          text-align: center;
+        }
+        p {
+          margin-top: 1.8rem;
+        }
+      }
+      .all-cards {
+        @include flex-element(column, center, center);
+        .card {
+          max-width: 100%;
+          &.active {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(480px) {
+    .container {
+      padding: 0;
+      .text {
+        @include flex-element(column, center, center);
+        h2 {
+          text-align: center;
+        }
+        p {
+          margin-top: 1.8rem;
+        }
+      }
+      .all-cards {
+        @include flex-element(column, center, center);
+        .card {
+          max-width: 100%;
+          padding: 0 3rem;
+          height: 100%;
+          margin-bottom: 4rem;
+
+          &.active {
+            margin-right: 0;
+            height: 32.3rem;
+            // margin-bottom: 2.5rem;
+          }
+        }
+        .list-cards {
+          max-width: 100%;
+          @include flex-element(column, center, center);
         }
       }
     }

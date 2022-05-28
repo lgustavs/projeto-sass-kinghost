@@ -1,3 +1,4 @@
+/* line 1, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_reset.scss */
 * {
   margin: 0px;
   padding: 0px;
@@ -9,30 +10,35 @@
   font-family: "Lato", sans-serif;
 }
 
+/* line 12, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_reset.scss */
 html {
   font-size: 62.5%;
 }
 
 @media (max-width: 1280px) {
+  /* line 12, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_reset.scss */
   html {
     font-size: 55%;
   }
 }
 
+/* line 19, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_reset.scss */
 img {
   max-width: 100%;
-  display: block;
 }
 
+/* line 23, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_reset.scss */
 button {
   cursor: pointer;
 }
 
+/* line 27, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_reset.scss */
 a {
   text-decoration: none;
 }
 
 /* Colors */
+/* line 1, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_grid.scss */
 .container {
   width: 100%;
   max-width: 124.6rem;
@@ -40,29 +46,119 @@ a {
   margin: 0 auto;
 }
 
-.bg-purple {
+/* line 1, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 57.9rem;
+  height: 11.9rem;
   background-color: #5f3ca1;
+  display: flex;
+  z-index: 2022;
 }
 
-.bg-purple .s-main {
-  margin-top: 11.8rem;
-}
-
-.bg-purple .s-main .container {
+/* line 11, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+header .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.bg-purple .s-main .container .info-left {
+/* line 14, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+header .container nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* line 17, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+header .container nav ul {
+  display: flex;
+}
+
+/* line 20, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+header .container nav ul li {
+  margin-right: 5.6rem;
+}
+
+/* line 23, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+header .container nav ul li:last-child {
+  margin-right: 0px;
+}
+
+/* line 27, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+header .container nav ul li a {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* line 31, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+header .container nav ul li a img {
+  margin-right: 1.6rem;
+}
+
+@media (max-width: 600px) {
+  /* line 1, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+  header {
+    height: 8rem;
+  }
+  /* line 42, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+  header .container {
+    justify-content: center;
+  }
+  /* line 44, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+  header .container nav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* line 1, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+  header {
+    height: 8rem;
+  }
+  /* line 52, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+  header .container {
+    justify-content: center;
+  }
+  /* line 54, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+  header .container .logo {
+    max-width: 14rem;
+  }
+  /* line 57, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_header.scss */
+  header .container nav {
+    display: none;
+  }
+}
+
+/* line 1, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main {
+  width: 100%;
+  background-color: #5f3ca1;
+  margin-top: 11.9rem;
+  padding-top: 3.9rem;
+}
+
+/* line 6, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 9, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main .container .info-left {
   width: 100%;
   max-width: 50rem;
 }
 
-.bg-purple .s-main .container .info-left .text h1 {
+/* line 14, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main .container .info-left .text h1 {
   color: #fff;
   font-size: 4.8rem;
   font-weight: 700;
@@ -71,7 +167,8 @@ a {
   line-height: 120%;
 }
 
-.bg-purple .s-main .container .info-left .text p {
+/* line 23, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main .container .info-left .text p {
   color: #fff;
   font-weight: 400;
   font-size: 1.8rem;
@@ -80,7 +177,8 @@ a {
   line-height: 150%;
 }
 
-.bg-purple .s-main .container .info-left .actions a {
+/* line 34, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main .container .info-left .actions .btn-teste {
   display: inline-block;
   height: 5.4rem;
   padding: 0 5rem;
@@ -94,12 +192,14 @@ a {
   margin-bottom: 8.4rem;
 }
 
-.bg-purple .s-main .container .info-left .actions a:hover {
+/* line 21, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_mixins.scss */
+.s-main .container .info-left .actions .btn-teste:hover {
   background-color: #341470;
   color: #ffbf00;
 }
 
-.bg-purple .s-main .container .info-left .actions .btn-down {
+/* line 39, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main .container .info-left .actions .btn-down {
   width: 100%;
   max-width: 20.5rem;
   display: flex;
@@ -108,7 +208,8 @@ a {
   align-items: center;
 }
 
-.bg-purple .s-main .container .info-left .actions .btn-down button {
+/* line 44, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main .container .info-left .actions .btn-down button {
   width: 4.2rem;
   height: 4.2rem;
   background-color: #7B5ABA;
@@ -119,21 +220,77 @@ a {
   align-items: center;
 }
 
-.bg-purple .s-main .container .info-left .actions .btn-down span {
+/* line 52, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main .container .info-left .actions .btn-down span {
   color: #fff;
   font-weight: 700;
 }
 
-.bg-purple .s-main .container .image-right {
+/* line 60, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-main .container .image-right {
   position: relative;
-  top: 8rem;
+  top: 3.4rem;
 }
 
+@media (max-width: 991px) {
+  /* line 67, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-main .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 69, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-main .container .info-left {
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+  /* line 73, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-main .container .info-left .text h1 {
+    text-align: center;
+  }
+  /* line 76, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-main .container .info-left .text p {
+    max-width: 100%;
+    text-align: center;
+  }
+  /* line 82, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-main .container .info-left .actions .btn-teste {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  /* line 87, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-main .container .info-left .actions .btn-down {
+    max-width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 1, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-main {
+    padding-top: 2.5rem;
+    margin-top: 8rem;
+  }
+  /* line 103, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-main .container .info-left .text h1 {
+    font-size: 4.3rem;
+  }
+  /* line 108, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-main .container .image-right {
+    left: -0.9rem;
+  }
+}
+
+/* line 115, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas {
   padding-top: 14.9rem;
   padding-bottom: 9.9rem;
 }
 
+/* line 120, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .text {
   margin-bottom: 5.3rem;
   display: flex;
@@ -142,16 +299,24 @@ a {
   align-items: center;
 }
 
+/* line 124, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .text h2 {
   width: 100%;
   max-width: 50.2rem;
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 3.2rem;
   line-height: 130%;
   color: #453f51;
 }
 
+/* line 133, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+.s-ferramentas .container .text p {
+  color: #5e5570;
+  line-height: 150%;
+}
+
+/* line 139, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .all-cards {
   display: flex;
   flex-direction: row;
@@ -159,6 +324,7 @@ a {
   align-items: center;
 }
 
+/* line 142, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .all-cards .list-cards {
   width: 100%;
   max-width: 90.4rem;
@@ -169,6 +335,7 @@ a {
   align-items: center;
 }
 
+/* line 149, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .all-cards .card {
   width: 100%;
   max-width: 28rem;
@@ -178,19 +345,23 @@ a {
   padding-left: 4.2rem;
 }
 
+/* line 157, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .all-cards .card.active {
   background-color: rgba(197, 190, 220, 0.1);
   margin-right: 3.4rem;
 }
 
+/* line 161, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .all-cards .card.active .icon {
   background-color: #fff;
 }
 
+/* line 165, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .all-cards .card.active p {
   max-width: 20.4rem;
 }
 
+/* line 170, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .all-cards .card h3 {
   font-weight: 800;
   font-size: 1.8rem;
@@ -199,6 +370,7 @@ a {
   margin-bottom: 2rem;
 }
 
+/* line 178, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .all-cards .card .icon {
   width: 6.4rem;
   height: 6.4rem;
@@ -211,6 +383,7 @@ a {
   align-items: center;
 }
 
+/* line 187, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
 .s-ferramentas .container .all-cards .card p {
   max-width: 23.9rem;
   font-weight: 400;
@@ -218,68 +391,137 @@ a {
   color: #5e5570;
 }
 
-header {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 11.9rem;
-  background-color: #5f3ca1;
-  display: flex;
-  z-index: 2022;
+@media (max-width: 991px) {
+  /* line 198, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 200, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .list-cards {
+    max-width: 100%;
+    gap: 2.5rem;
+  }
+  /* line 204, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .card {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    padding-left: 0;
+  }
+  /* line 209, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .card p {
+    max-width: 100%;
+    text-align: center;
+  }
+  /* line 213, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .card.active {
+    margin-right: 0;
+  }
+  /* line 215, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .card.active p {
+    max-width: 100%;
+  }
+  /* line 220, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .list-cards {
+    max-width: 100%;
+  }
 }
 
-header .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .container nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-header .container nav ul {
-  display: flex;
-}
-
-header .container nav ul li {
-  margin-right: 5.6rem;
-}
-
-header .container nav ul li:last-child {
-  margin-right: 0px;
-}
-
-header .container nav ul li a {
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-header .container nav ul li a img {
-  margin-right: 1.6rem;
-}
-
-@media (max-width: 768px) {
-  header .container nav {
-    display: none;
+@media (max-width: 600px) {
+  /* line 115, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas {
+    padding-top: 12rem;
+  }
+  /* line 228, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container {
+    padding: 0;
+  }
+  /* line 230, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+  }
+  /* line 233, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .text h2 {
+    text-align: center;
+  }
+  /* line 236, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .text p {
+    margin-top: 1.8rem;
+  }
+  /* line 240, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 242, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .card {
+    max-width: 100%;
+  }
+  /* line 244, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .card.active {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 480px) {
-  header .container {
-    margin: 0 2.4rem;
+  /* line 252, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container {
+    padding: 0;
   }
-  header .container nav {
-    display: none;
+  /* line 254, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  header .container .logo {
-    width: 16.4rem;
+  /* line 256, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .text h2 {
+    text-align: center;
+  }
+  /* line 259, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .text p {
+    margin-top: 1.8rem;
+  }
+  /* line 263, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 265, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .card {
+    max-width: 100%;
+    padding: 0 3rem;
+    height: 100%;
+    margin-bottom: 4rem;
+  }
+  /* line 271, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .card.active {
+    margin-right: 0;
+    height: 32.3rem;
+  }
+  /* line 277, ../../../../../../luiz.gustavo/Documents/GitHub/projeto-sass-kinghost/sass/_home.scss */
+  .s-ferramentas .container .all-cards .list-cards {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
+
+/*# sourceMappingURL=main.css.map */

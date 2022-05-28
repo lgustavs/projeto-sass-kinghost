@@ -1,6 +1,7 @@
 header {
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 11.9rem;
   background-color: $purple;
@@ -34,20 +35,27 @@ header {
         }
       }
     }
+  }
 
-    @include responsive(768px) {
+  @include responsive(600px) {
+    height: 8rem;
+    .container {
+      justify-content: center;
       nav {
         display: none;
       }
     }
+  }
 
-    @include responsive(480px) {
+  @include responsive(480px) {
+    height: 8rem;
+    .container {
+      justify-content: center;
+      .logo {
+        max-width: 14rem;
+      }
       nav {
         display: none;
-      }
-
-      .logo {
-        width: 16.4rem;
       }
     }
   }
