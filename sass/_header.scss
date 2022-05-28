@@ -5,20 +5,28 @@ header {
   height: 11.9rem;
   background-color: $purple;
   display: flex;
+  z-index: 2022;
+
   .container {
     @include flex-element(row, space-between, center);
+
     nav {
       @include flex-element(row, space-between, flex-end);
+
       ul {
         display: flex;
+
         li {
           margin-right: 5.6rem;
+
           &:last-child {
             margin-right: 0px;
           }
+
           a {
             color: $white;
             @include flex-element(row, flex-start, center);
+
             img {
               margin-right: 1.6rem;
             }
@@ -26,6 +34,7 @@ header {
         }
       }
     }
+
     @include responsive(768px) {
       nav {
         display: none;
@@ -36,6 +45,7 @@ header {
       nav {
         display: none;
       }
+
       .logo {
         width: 16.4rem;
       }
